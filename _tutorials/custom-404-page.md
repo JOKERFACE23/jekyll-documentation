@@ -34,13 +34,13 @@ Apache Web Servers load a configuration file named [`.htaccess`](http://www.htac
 
 Simply add the following to your `.htaccess` file.
 
-```apache
+```
 ErrorDocument 404 /404.html
 ```
 
 With an `.htaccess` file, you have the freedom to place your error page within a subdirectory.
 
-```apache
+```
 ErrorDocument 404 /error_pages/404.html
 ```
 
@@ -55,7 +55,7 @@ The procedure is just as simple as configuring Apache servers, but slightly diff
 
 The nginx configuration file depends on the system in which it is installed. In most systems, it is the `nginx.conf` file, which is usually located inside `/etc/nginx/` or `/etc/nginx/conf/`. However, in other systems like Ubuntu, you would have to look for a `default` nginx configuration file, containing server related information, which is usually located inside `/etc/nginx/sites-available/` or `/etc/nginx/sites-enabled/`. Add the following to your nginx configuration file, _i.e._ either to `nginx.conf` file or to `default` file:
 
-```nginx
+```
 server {
   error_page 404 /404.html;
   location = /404.html {
